@@ -28,3 +28,17 @@ VeryHeavyService.perform_async(5)
 
 amazing! but we have one problem, if we perform 20 times? this code will create 20 connections(if we connection some website, maybe we will be blocked..)
 
+### producer/consumer pattern
+
+reference: https://en.wikipedia.org/wiki/Producer%E2%80%93consumer_problem
+
+### create a queue
+
+use `perform_queue`, now we have a queue to perform!!
+
+```
+VeryHeavyService.perform_queue(5)
+# <Thread::Queue:0x00007f8fa6a2d2c0>
+```
+
+
