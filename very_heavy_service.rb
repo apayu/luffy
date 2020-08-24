@@ -1,7 +1,8 @@
-require './luffy/worker'
+require_relative './luffy/luffy'
 
-Luffy.backend = Queue.new
-Luffy::Processor.start(5)
+# Luffy.backend = Queue.new
+# Luffy.backend = Luffy::Backend::Redis.new
+# Luffy::Processor.start(5)
 
 class VeryHeavyService
   include Luffy::Worker
